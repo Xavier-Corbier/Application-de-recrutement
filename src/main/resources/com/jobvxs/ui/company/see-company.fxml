@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobvxs.ui.company.SeeCompanyProfileController">
+   <children>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="700.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <BorderPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <top>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Profile Company" textAlignment="CENTER" wrappingWidth="600.0" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" top="30.0" />
+                           </BorderPane.margin>
+                        </Text>
+                     </top>
+                     <center>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <VBox.margin>
+                                    <Insets left="100.0" right="100.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Text fx:id="companyEmail" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Text fx:id="companyName" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Text fx:id="companyAddress" strokeType="OUTSIDE" strokeWidth="0.0" text="Address :" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Text fx:id="companyNbEmployee" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of employee :">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Text fx:id="companyPhoneNumber" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone number :" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="26.0" prefWidth="898.0">
+                                 <children>
+                                    <Text fx:id="companyDescription" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </center>
+                     <bottom>
+                        <VBox alignment="CENTER" prefHeight="123.0" prefWidth="898.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#onDeleteButton" text="Delete my profile">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="updateButton" mnemonicParsing="false" onAction="#onUpdateButton" text="Update my profile">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Text fx:id="error" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" />
+                           </children>
+                        </VBox>
+                     </bottom>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <BorderPane fx:id="paneRate" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <top>
+                        <VBox fx:id="createRateBox" alignment="BASELINE_LEFT" prefHeight="78.0" prefWidth="599.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="599.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="18.0" prefWidth="121.0" text="Rate this company : " textAlignment="CENTER">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Pane prefHeight="54.0" prefWidth="176.0">
+                                       <children>
+                                          <Rating fx:id="rateField" prefHeight="22.0" prefWidth="176.0" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="599.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="117.0" text="Comment : (optional) ">
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="commentField" />
+                                    <Button fx:id="createRate" mnemonicParsing="false" onAction="#onSubmitRatingButton" text="Submit ">
+                                       <HBox.margin>
+                                          <Insets left="30.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" />
+                           </padding>
+                        </VBox>
+                     </top>
+                     <center>
+                        <ScrollPane prefHeight="146.0" prefWidth="599.0" BorderPane.alignment="CENTER">
+                          <content>
+                            <AnchorPane>
+                                 <children>
+                                    <ListView fx:id="listView" prefHeight="400.0" prefWidth="862.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </center>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

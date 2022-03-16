@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobvxs.ui.MenuAdminController">
+    <children>
+      <BorderPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+              <MenuBar fx:id="menu" prefHeight="25.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                  <menus>
+                  <Menu mnemonicParsing="false">
+                     <graphic>
+                        <Label onMouseClicked="#onHome" text="Home" />
+                     </graphic>
+                  </Menu>
+                      <Menu mnemonicParsing="false" text="My Profile">
+                          <items>
+                              <MenuItem mnemonicParsing="false" onAction="#onSingOutButton" text="Sign out" />
+                          </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="JobSeeker">
+                          <items>
+                              <MenuItem mnemonicParsing="false" onAction="#onListJobSeekerButton" text="List" />
+                          </items>
+                      </Menu>
+                  <Menu mnemonicParsing="false" text="Company">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#onListCompanyButton" text="List" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Job category">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#onCreateJobCategoryButton" text="Create" />
+                        <MenuItem mnemonicParsing="false" onAction="#onListJobCategoryButton" text="List" />
+                    </items>
+                  </Menu>
+                      <Menu mnemonicParsing="false">
+                          <graphic>
+                              <Label onMouseClicked="#onClickButtonNotification" text="Notification" />
+                          </graphic>
+                      </Menu>
+                  </menus>
+              </MenuBar>
+         </top>
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fx:id="errorText" fill="#fa0000" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+    </children>
+</AnchorPane>

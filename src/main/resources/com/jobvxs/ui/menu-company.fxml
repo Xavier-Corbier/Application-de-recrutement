@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobvxs.ui.MenuCompanyController">
+   <children>
+      <Text fx:id="errorText" fill="#ea0000" layoutX="289.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <BorderPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <MenuBar fx:id="menu" BorderPane.alignment="CENTER">
+              <menus>
+                  <Menu mnemonicParsing="false">
+                     <graphic>
+                        <Label onMouseClicked="#onHome" text="Home" />
+                     </graphic>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="My account">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onProfileButton" text="My profile" />
+                        <MenuItem mnemonicParsing="false" onAction="#onLogout" text="Logout" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Job Offer">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#onCreateJobOfferButton" text="Create new offer" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false">
+                     <graphic>
+                        <Label onMouseClicked="#onListApplication" text="Applications" />
+                     </graphic>
+                  </Menu>
+                  <Menu mnemonicParsing="false">
+                      <graphic>
+                          <Label onMouseClicked="#onClickButtonNotification" text="Notification" />
+                      </graphic>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

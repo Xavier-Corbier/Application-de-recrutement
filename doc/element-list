@@ -1,0 +1,10 @@
+module:com.jobvxs.jobvxs
+com.jobvxs.bl
+com.jobvxs.bl.tools
+com.jobvxs.pl
+com.jobvxs.pl.connect
+com.jobvxs.pl.postgre
+com.jobvxs.ui
+com.jobvxs.ui.admin
+com.jobvxs.ui.company
+com.jobvxs.ui.jobseeker
